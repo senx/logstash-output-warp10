@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description     = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
   s.authors         = ["Cityzen data"]
   s.email           = 'contact@cityzendata.net'
-  s.homepage        = ""
+  s.homepage        = "https://github.com/cityzendata/logstash-output-warp10.git"
   s.require_paths = ["lib"]
 
   # Files

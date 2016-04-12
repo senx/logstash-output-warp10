@@ -1,6 +1,6 @@
 # Logstash plugin #
 
-This is a plugin for [Logstash](https://github.com/elastic/logstash), inspired from the [influxDB one](https://github.com/logstash-plugins/logstash-output-influxdb).
+This is a [Logstash](https://github.com/elastic/logstash) plugin to push data on Warp 10.
 
 It is fully free and fully open source. The license is Apache 2.0, meaning you are pretty much free to use it however you want in whatever way.
 

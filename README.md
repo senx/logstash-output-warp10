@@ -53,21 +53,21 @@ sudo bin/logstash agent -f logstash.conf
 
 ## Config File 
 
-* warpUri : required, indicate the url where to push data
+* warpUri: required, indicate the url where to push data
 
-* token : required, Write token allowing pushing on a Warp10 application
+* token: required, Write token allowing pushing to a Warp 10 instance
 
-* gtsName : name of the gts wich will contain the logs, by default logstash
+* gtsName: name of the gts wich will contain the logs, by default logstash
 
-* labels : List of pattern, if they are contained in the event, then they are added to the gts as label, by default empty
+* labels: List of pattern, if they are contained in the event, then they are added to the gts as label, by default empty
 
-* onlyOneValue : If true keep only one event key as value, otherwise the entire log is pushed as value, by default false
+* onlyOneValue: If true keep only one event key as value, otherwise the entire log is pushed as value, by default false
 
-* valueKey : The key of the value to push on Warp10 if onlyOneValue is true, by default message
+* valueKey: The key of the value to push on Warp 10 if onlyOneValue is true, by default message
 
-* flush_size : This setting controls how many events will be buffered before sending a batch of events, by default 100
+* flush_size: This setting controls how many events will be buffered before sending a batch of events, by default 100
 
-* idle_flush_time : The amount of time (in seconds) since last flush before a flush is forced, by default 1
+* idle_flush_time: The amount of time (in seconds) since last flush before a flush is forced, by default 1
 
 ## Contributing
 
@@ -79,4 +79,4 @@ It is more important to the community that you are able to contribute.
 
 ## Contact
 
-* contact@cityzendata.com
+* contact@senx.io

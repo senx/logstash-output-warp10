@@ -1,6 +1,6 @@
 # Logstash plugin #
 
-This is a [Logstash](https://github.com/elastic/logstash) plugin to push data on Warp 10.
+This is a [Logstash](https://github.com/elastic/logstash) plugin to push data on _Warp 10_.
 
 It is fully free and fully open source. The license is Apache 2.0, meaning you are pretty much free to use it however you want in whatever way.
 
@@ -17,6 +17,21 @@ Logstash provides infrastructure to automatically generate documentation for thi
 
 Need help? Try #logstash on freenode IRC or the https://discuss.elastic.co/c/logstash discussion forum.
 
+## Test
+* To get started, clone the repository
+
+* Update your dependencies
+
+```sh
+bundle install
+```
+
+* Run tests
+
+```sh
+bundle exec rspec --format documentation
+```
+
 ## Install
 * To get started, clone the repository
 
@@ -26,15 +41,15 @@ Need help? Try #logstash on freenode IRC or the https://discuss.elastic.co/c/log
 gem build logstash-output-warp10.gemspec
 ```
 
-* Install plugin 
+* Install plugin
 
-```
+```sh
 sudo bin/plugin install /path/to/logstash-output-warp10/logstash-output-warp10-0.0.1.gem
 ```
 
-* Config Plugin, edit logstash.conf file
+* Config Plugin, edit _logstash.conf_ file
 
-```
+```sh
 output {
   warp10 {
     warpUri => "warpUri"
@@ -47,33 +62,33 @@ output {
 
 * Run logstash
 
-```
+```sh
 sudo bin/logstash agent -f logstash.conf
 ```
 
-## Config File 
+## Config File
 
-* warpUri: required, indicate the url where to push data
+* *warpUri*: (required), indicate the url where to push data
 
-* token: required, Write token allowing pushing to a Warp 10 instance
+* *token*: (required), Write token allowing pushing to a _Warp 10_ instance
 
-* gtsName: name of the gts wich will contain the logs, by default logstash
+* *gtsName*: name of the gts wich will contain the logs, by default **logstash**
 
-* labels: List of pattern, if they are contained in the event, then they are added to the gts as label, by default empty
+* *labels*: List of pattern, if they are contained in the event, then they are added to the gts as label, by default empty
 
-* onlyOneValue: If true keep only one event key as value, otherwise the entire log is pushed as value, by default false
+* *onlyOneValue*: If true keep only one event key as value, otherwise the entire log is pushed as value, by default false
 
-* valueKey: The key of the value to push on Warp 10 if onlyOneValue is true, by default message
+* *valueKey*: The key of the value to push on _Warp 10_ if onlyOneValue is true, by default message
 
-* flush_size: This setting controls how many events will be buffered before sending a batch of events, by default 100
+* *flush_size*: This setting controls how many events will be buffered before sending a batch of events, by default **100**
 
-* idle_flush_time: The amount of time (in seconds) since last flush before a flush is forced, by default 1
+* *idle_flush_time*: The amount of time (in seconds) since last flush before a flush is forced, by default **1**
 
 ## Contributing
 
 All contributions are welcome: ideas, patches, documentation, bug reports, complaints, and even something you drew up on a napkin.
 
-Programming is not a required skill. Whatever you've seen about open source and maintainers or community members  saying "send patches or die" - you will not see that here.
+Programming is not a required skill. Whatever you've seen about open source and maintainers or community members saying send patches or die you will not see that here.
 
 It is more important to the community that you are able to contribute.
 

@@ -37,7 +37,7 @@ class LogStash::Outputs::Warp < LogStash::Outputs::Base
 
   # The write token credential of your application
   config :token, :validate => :string, :required => true
- 
+
   # The given name of your gts
   config :gtsName, :validate => :string, :default => "logstash", :required => true
 
@@ -47,7 +47,7 @@ class LogStash::Outputs::Warp < LogStash::Outputs::Base
 
   # Boolean true to keep only one field as value of the entire log
   config :onlyOneValue, :validate => ['true', 'false'], :default => 'false', :required => true
-  
+
   # The key oy the value to keep if onlyMessage is to true
   config :valueKey, :validate => :string, :default => "message"
 
@@ -65,7 +65,7 @@ class LogStash::Outputs::Warp < LogStash::Outputs::Base
   # This helps keep both fast and slow log streams moving along in
   # near-real-time.
   config :idle_flush_time, :validate => :number, :default => 1
-  
+
   def to_boolean(str)
       str == 'true'
   end
@@ -89,7 +89,7 @@ class LogStash::Outputs::Warp < LogStash::Outputs::Base
   end # def register
 
   public
-  def receive(event)  
+  def receive(event)
     data_points = JSON.parse(event.to_json())
     tags = "source=logstash"
     labels.each do |label|

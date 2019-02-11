@@ -6,12 +6,12 @@ Gem::Specification.new do |s|
   s.summary         = "This output lets you output Metrics to Warp 10"
   s.description     = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
   s.authors         = ["SenX S.A.S."]
-  s.email           = 'contact@senx.io"
+  s.email           = 'contact@senx.io'
   s.homepage        = "https://github.com/senx/logstash-output-warp10.git"
-  s.require_paths = ["lib"]
+  s.require_paths   = ["lib"]
 
   # Files
-  s.files = Dir['lib/**/*','spec/**/*','*.gemspec','*.md','Gemfile']
+  s.files = Dir['lib/**/*','spec/**/*','vendor/**/*','*.gemspec','*.md','CONTRIBUTORS','Gemfile','LICENSE.md']
 
   # Special flag to let us know this is actually a logstash plugin
   s.metadata = { "logstash_plugin" => "true", "logstash_group" => "output" }
